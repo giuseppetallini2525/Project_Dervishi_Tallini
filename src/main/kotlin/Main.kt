@@ -19,6 +19,8 @@ fun main() {
     val wine3 = Wine("Wine3", "Rose", vineyard2)
     val wine4 = Wine("Wine4", "Sparkling", vineyard3)
 
+
+
     // Set the elements property for the parent directories
     region1.addVineyard(vineyard1)
     region1.addVineyard(vineyard2)
@@ -31,6 +33,12 @@ fun main() {
 
     catalog.addRegion(region1)
     catalog.addRegion(region2)
+
+    val visitor = WineCatalogVisitor()
+
+    // Start the visiting process
+    catalog.accept(visitor)
+
 
     // Print the structure
     println(catalog.toText())

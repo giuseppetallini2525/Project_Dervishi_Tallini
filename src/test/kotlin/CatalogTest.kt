@@ -36,4 +36,12 @@ class CatalogTest {
         assertEquals(3, vineyard1.deepElementCount())
         assertEquals(2, wine1.deepElementCount())
     }
+
+    @Test
+    fun testDepth() {
+        assertEquals(0, catalog.depth())
+        assertEquals(1, region1.depth())
+        assertEquals(2, vineyard1.depth())
+        assertEquals(3, wine1.depth())
+    }
 }
