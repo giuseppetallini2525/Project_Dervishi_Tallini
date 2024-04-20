@@ -1,6 +1,11 @@
-class Catalog {
+class Catalog : Element {
     val name: String = "Catalogue"
     val regions: MutableList<Region> = mutableListOf()
+
+    override fun accept(visitor: Visitor) {
+        visitor.visit(this)
+        regions.forEach { it.accept(visitor) }
+    }
 
     fun addRegion(region: Region) {
         regions.add(region)

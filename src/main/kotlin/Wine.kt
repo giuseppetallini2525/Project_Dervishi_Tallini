@@ -1,4 +1,8 @@
-class Wine(val name: String, val typeOfWine: String, val parent: Vineyard) {
+class Wine:Element(val name: String, val typeOfWine: String, val parent: Vineyard) {
+
+    override fun accept(visitor: Visitor) {
+        visitor.visit(this)
+    }
 
     fun deepElementCount(): Int {
         return 1

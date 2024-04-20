@@ -1,7 +1,12 @@
 import Wine
 
-class Vineyard(val name: String, val parent: Region) {
+class Vineyard:Element(val name: String, val parent: Region) {
     val wines: MutableList<Wine> = mutableListOf()
+
+    override fun accept(visitor: Visitor) {
+        if (visitor.visit(this)) {
+            wines.forEach { it.accept(visitor) }
+        }
 
     fun addWine(wine: Wine) {
         wines.add(wine)
