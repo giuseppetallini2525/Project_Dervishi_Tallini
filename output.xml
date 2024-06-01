@@ -1,0 +1,23 @@
+<catalog >Wine Catalog in PeppeEni Restaurant
+  <region name="Lazio">
+    <vineyard name="Fontana Candida">
+      <wine >Frascati Superiore</wine>
+      <wine >Santa Teresa</wine>
+    </vineyard>
+    <vineyard name="Gotto d'oro">
+      <wine >Marino Bianco</wine>
+      <wine >Marino Superiore</wine>
+    </vineyard>
+  </region>
+</catalog><catalog >Wine Catalog in PeppeEni Restaurant
+  <region name="Lazio">
+    <vineyard name="Fontana Candida">
+      <wine >Frascati Superiore</wine>
+      <wine >Santa Teresa</wine>
+    </vineyard>
+    <vineyard name="Gotto d'oro">
+      <wine >Marino Bianco</wine>
+      <wine >Marino Superiore</wine>
+    </vineyard>
+  </region>
+</catalog>
