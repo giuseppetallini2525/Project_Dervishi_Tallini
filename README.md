@@ -36,7 +36,6 @@ val catalog = xml("catalog") {
     }
 }
 
-### Modifying Entities
 // Adding an attribute
 catalog["lazio"]?.setAttribute("climate", "warm")
 
@@ -50,7 +49,7 @@ region elements {
     println("Element: ${it.name}")
 }
 
-### Visitor Creation
+Visitor Creation
 class CustomVisitor : XMLEntityVisitor {
     override fun visit(entity: XMLEntity): Boolean {
         println("Visiting: ${entity.name}")
@@ -66,17 +65,18 @@ val customVisitor = CustomVisitor()
 catalog.accept(customVisitor)
 
 
-### Visitor Usage
+Visitor Usage
+
 val printer = PrettyPrintVisitor()
 catalog.accept(printer)
 println(printer.getPrettyPrint())
 
 It is also included a section of Testing
+```
+
+ ### docs/api.md
 
 
-### docs/api.md
-
-```markdown
 # API Documentation for Project Tallini Dervishi
 
 ## Overview
